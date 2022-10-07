@@ -46,6 +46,30 @@ body {
   transform: translate(-50%, -50%);
 }
 
+.bottom {
+  top: 90%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 .cursor {
   color: white;
+}
+
+.texture-selector {
+  transform: scale(3);
+  border-radius: 20px 0 20px 0;
+  background: rgba(0, 0, 0, 0.4);
+  height: 30px;
+  padding: 1px 5px;
+}
+
+.texture-selector img {
+  margin-left: 3px;
+  border: 1px solid transparent !important;
+  transform: translate(0, -70%);
+}
+
+.texture-selector img.active {
+  border: 1px solid rgb(180, 29, 29) !important;
 }
