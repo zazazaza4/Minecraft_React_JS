@@ -5,7 +5,7 @@ import { groundTexture } from '../images/textures';
 export const Ground = () => {
   const [ref] = usePlane(() => ({
     rotation: [-Math.PI / 2, 0, 0],
-    position: [0, 0, 0]
+    position: [0, -0.5, 0]
   }));
   const [addCube] = useStore((state) => [state.addCube]);
 
@@ -15,9 +15,9 @@ export const Ground = () => {
     <mesh
       onClick={(e) => {
         e.stopPropagation();
-        const [x, y, z] = Object.values(e.point).map((value) => Math.floor(value));
+        const [x, y, z] = Object.values(e.point).map((value) => Math.ceil(value));
 
-        addCube(x, y + 0.5, z);
+        addCube(x, y, z);
       }}
       ref={ref}>
       <planeBufferGeometry attach="geometry" args={[100, 100]} />
