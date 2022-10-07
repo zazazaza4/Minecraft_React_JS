@@ -17,7 +17,7 @@ export const Ground = () => {
         e.stopPropagation();
         const [x, y, z] = Object.values(e.point).map((value) => Math.floor(value));
 
-        addCube(x, y + 1.5, z);
+        addCube(x, y + 0.5, z);
       }}
       ref={ref}>
       <planeBufferGeometry attach="geometry" args={[100, 100]} />
